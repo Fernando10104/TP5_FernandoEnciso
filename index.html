@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TP5 - Plataforma interactiva para gestionar inscripciones y exámenes en Computación Gráfica y Programación Web.">
+    <title>TP5 · Proyecto Formularios</title>
+    <link rel="stylesheet" href="statics/styles.css">
+</head>
+<body class="landing-body">
+    <main id="app">
+        <header class="hero" id="bienvenida">
+            <div class="hero-text">
+                <h1>Plataforma Académica Interactiva</h1>
+                <p class="lead">Gestiona tus inscripciones, practica tus evaluaciones y recibe una bienvenida personalizada antes de iniciar la cursada.</p>
+                <ul class="feature-list">
+                    <li>✔️ Formularios responsivos con validaciones.</li>
+                    <li>✔️ Animaciones suaves y botones accesibles.</li>
+                    <li>✔️ Mensajes personalizados para cada estudiante.</li>
+                </ul>
+                <div class="chip-list">
+                    <span class="chip" data-chip="nombre">Participante invitado</span>
+                </div>
+            </div>
+
+            <div class="hero-panel">
+                <h2>Activa tu mensaje de bienvenida</h2>
+                <p class="panel-text">Ingresa tu nombre y apellido para que el sistema pueda saludarte en todas las páginas.</p>
+                <form id="welcome-form" class="stack">
+                    <label class="form-field">
+                        <span>Nombre</span>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Andrea" autocomplete="given-name" required>
+                    </label>
+                    <label class="form-field">
+                        <span>Apellido</span>
+                        <input type="text" id="apellido" name="apellido" placeholder="Ej: Núñez" autocomplete="family-name" required>
+                    </label>
+                    <label class="form-field">
+                        <span>C.I.C. Nº</span>
+                        <input type="text" id="cic" name="cic" placeholder="1234567" maxlength="20">
+                    </label>
+                    <button type="submit" class="primary-btn full">Guardar y mostrar saludo</button>
+                </form>
+                <div id="welcome-message" class="welcome-message hidden" aria-live="polite">
+                    <p class="saludo">Hola, <span id="welcome-name">participante</span> 👋</p>
+                    <p>Tu registro quedó guardado. Usa los botones inferiores para continuar con la inscripción o practicar el examen.</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="card-grid" aria-label="Navegación principal">
+            <article class="card">
+                <div class="card-icon">📥</div>
+                <h3>Inscripciones guiadas</h3>
+                <p>Completa el formulario oficial con datos personales, correo institucional y selecciona el curso deseado.</p>
+                <a class="primary-btn" href="templates/inscripcion.html">Ir a inscripciones</a>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">📝</div>
+                <h3>Examen diagnóstico</h3>
+                <p>Responde preguntas clave de informática y conoce tu puntaje inmediatamente con retroalimentación.</p>
+                <a class="secondary-btn" href="templates/examen.html">Resolver examen</a>
+            </article>
+
+            <article class="card">
+                <div class="card-icon">🏠</div>
+                <h3>Volver al inicio</h3>
+                <p>Revisa o actualiza tu mensaje de bienvenida cuando lo necesites. También puedes usar este botón desde las demás páginas.</p>
+                <a class="ghost-btn" href="index.html">Botón de inicio</a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Fernando Enciso</p>
+    </footer>
+
+    <script src="js/script_bienvenida.js"></script>
+</body>
+</html>

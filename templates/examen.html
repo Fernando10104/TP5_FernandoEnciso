@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen · TP5 Formularios</title>
+    <link rel="stylesheet" href="../statics/styles.css">
+</head>
+<body class="form-body">
+    <main class="form-wrapper" id="examen-root">
+        <section class="form-card">
+            <a class="return-home" href="../index.html">← Botón de inicio</a>
+            <p class="badge">Autoevaluación</p>
+            <h1>Examen de informática</h1>
+            <p class="small-note">Selecciona la respuesta correcta para cada pregunta y presiona "Enviar" para conocer tu puntaje.</p>
+
+            <form id="examen-form" class="stack">
+                <ol class="question-list">
+                    <li>
+                        <p>1. ¿Cuál es el lenguaje de programación más usado actualmente?</p>
+                        <label class="inline"><input type="radio" name="q1" value="python" required>Python</label>
+                        <label class="inline"><input type="radio" name="q1" value="java">Java</label>
+                        <label class="inline"><input type="radio" name="q1" value="ruby">Ruby</label>
+                        <label class="inline"><input type="radio" name="q1" value="go">Go</label>
+                    </li>
+                    <li>
+                        <p>2. El hardware es la parte física de un computador.</p>
+                        <label class="inline"><input type="radio" name="q2" value="verdadero" required>Verdadero</label>
+                        <label class="inline"><input type="radio" name="q2" value="falso">Falso</label>
+                    </li>
+                    <li>
+                        <p>3. ¿Qué es HTML? (responde brevemente)</p>
+                        <input type="text" name="q3" placeholder="Ej: Lenguaje de marcado" required>
+                    </li>
+                    <li>
+                        <p>4. ¿Qué significa CPU?</p>
+                        <label class="inline"><input type="radio" name="q4" value="central" required>Unidad Central de Procesamiento</label>
+                        <label class="inline"><input type="radio" name="q4" value="control">Unidad de Control de Procesos</label>
+                        <label class="inline"><input type="radio" name="q4" value="comunicacion">Unidad de Comunicación Personal</label>
+                    </li>
+                    <li>
+                        <p>5. ¿El sistema operativo es un software?</p>
+                        <label class="inline"><input type="radio" name="q5" value="si" required>Verdadero</label>
+                        <label class="inline"><input type="radio" name="q5" value="no">Falso</label>
+                    </li>
+                </ol>
+
+                <button type="submit" class="secondary-btn full">Enviar respuestas</button>
+            </form>
+
+            <div id="score-panel" class="score-panel">
+                <strong>Puntaje pendiente</strong>
+                <p class="small-note">Tus resultados aparecerán aquí.</p>
+            </div>
+        </section>
+
+        <aside class="form-side">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Estudiante realizando un examen en línea">
+            <h2>Consejos rápidos</h2>
+            <ul class="tips">
+                <li>Lee con calma cada pregunta y subraya las palabras claves.</li>
+                <li>Realiza el examen todas las veces que quieras, las respuestas se resetean automáticamente.</li>
+                <li>Utiliza el resumen final para detectar qué temas debes repasar.</li>
+            </ul>
+        </aside>
+    </main>
+
+    <script src="../js/examen.js"></script>
+</body>
+</html>

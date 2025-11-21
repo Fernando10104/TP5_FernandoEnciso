@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción · TP5 Formularios</title>
+    <link rel="stylesheet" href="../statics/styles.css">
+</head>
+<body class="form-body">
+    <main class="form-wrapper" id="inscripcion-root">
+        <section class="form-card">
+            <a class="return-home" href="../index.html">← Volver al inicio</a>
+            <p class="badge">Formulario oficial</p>
+            <h1>Solicitud de inscripción</h1>
+            <p class="small-note">Completa todos los campos para reservar tu lugar en el laboratorio.</p>
+
+            <form id="inscripcion-form" class="stack">
+                <label class="form-field">
+                    <span>Nombre</span>
+                    <input type="text" name="nombre" placeholder="Ej: Sofía" required>
+                </label>
+                <label class="form-field">
+                    <span>Apellido</span>
+                    <input type="text" name="apellido" placeholder="Ej: Varela" required>
+                </label>
+                <label class="form-field">
+                    <span>Correo institucional</span>
+                    <input type="email" name="correo" placeholder="usuario@universidad.edu" required>
+                </label>
+                <label class="form-field">
+                    <span>Número de teléfono</span>
+                    <input type="tel" name="telefono" placeholder="(000) 000 000" pattern="[0-9()+\-\s]{6,}" required>
+                </label>
+                <label class="form-field">
+                    <span>Fecha de inscripción</span>
+                    <input type="date" name="fecha" required>
+                </label>
+
+                <fieldset>
+                    <legend>Curso de preferencia</legend>
+                    <label class="inline"><input type="radio" name="curso" value="Python" required>Python</label>
+                    <label class="inline"><input type="radio" name="curso" value="Java">Java</label>
+                    <label class="inline"><input type="radio" name="curso" value="SQL">SQL</label>
+                    <label class="inline"><input type="radio" name="curso" value="CSS">CSS</label>
+                </fieldset>
+
+                <label class="form-field">
+                    <span>Comentarios adicionales</span>
+                    <textarea name="comentarios" rows="3" placeholder="Compartí tus expectativas o disponibilidad"></textarea>
+                </label>
+
+                <button type="submit" class="primary-btn full">Enviar solicitud</button>
+            </form>
+
+            <div id="inscripcion-resumen" class="alert hidden"></div>
+        </section>
+
+        <aside class="form-side">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80" alt="Estudiantes colaborando frente a una computadora">
+            <h2>Recomendaciones</h2>
+            <ul class="tips">
+                <li>Tené a mano tu correo institucional para futuras notificaciones.</li>
+                <li>Seleccioná un curso compatible con tus conocimientos actuales.</li>
+                <li>Utiliza el botón de inicio para volver al panel principal y editar tu saludo.</li>
+            </ul>
+        </aside>
+    </main>
+
+    <script src="../js/inscripcion.js"></script>
+</body>
+</html>
